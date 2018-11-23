@@ -27,16 +27,25 @@ public class ThirdActivity {
         int flag = 0;
         //TODO 2 if name in a list -> set flag=1
         // if at the end flag=0 -> throw the exeption
+        for (String user : validUsers) {
+            if (user == name) flag = 1;
+        }
+        if (flag == 0)
+            throw new SecurityException("No Valid User");
     }
 
-    void catchMe(int num1, int num2)
-    {
+    void catchMe(int num1, int num2) {
         //TODO 3 Catch exeption
-            int result=num1/num2;
+        try {
+            int result = num1 / num2;
             System.out.println("The result is :" + result);
 
+        } catch (ArithmeticException exception) {
+
+        } finally {
             //TODO 4 prints a message "Thank you for using this program." always
             System.out.println("Thank you for using this program.");
+        }
 
     }
 }

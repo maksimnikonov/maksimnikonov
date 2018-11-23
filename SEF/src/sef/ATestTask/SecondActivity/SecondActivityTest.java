@@ -8,12 +8,13 @@ public class SecondActivityTest extends TestCase {
 
 	//TODO try to achieve 100% of test coverage
 
-	private SecondActivity theCalculator;
+	private SecondActivity Calculator;
 
 	protected void setUp() throws Exception {
 		super.setUp();
 		//	Initialize variables to be used here
-		theCalculator = new SecondActivity();
+		//theCalculator = new SecondActivity();
+		SecondActivity Calculator = new SecondActivity();
 	}
 
 	protected void tearDown() throws Exception {
@@ -23,16 +24,27 @@ public class SecondActivityTest extends TestCase {
 	//Example ->
 	@Test
 	public void testGetSumPositiveValue() {
-		assertEquals(15, (theCalculator.getSum(5, 10)));
-		assertEquals(15, (theCalculator.getSum(10, 5)));
+		assertEquals(15, (Calculator.getSum(5, 10)));
+		assertEquals(15, (Calculator.getSum(10, 5)));
 	}
 
 	//Example ->
 	@Test
 	public void testGetSumNegativeValue() {
-		assertEquals(5, (theCalculator.getSum(-5, 10)));
-		assertEquals(-5, (theCalculator.getSum(5, -10)));
-	}
+		assertEquals(5, (Calculator.getSum(-5, 10)));
+		assertEquals(-5, (Calculator.getSum(5, -10)));
+
+		public void testGetsubtractPositiveValue(){
+			assertEquals(5, (Calculator.getdiff(5, 10)));
+			assertEquals(-5, (Calculator.getdiff(10, 5)));
+			public void testGetsubtractNegativeValue(){
+				assertEquals(5, (Calculator.getdiff(-5, 10)));
+				assertEquals(-5, (Calculator.getdiff(5, -10)));
+
+			}
+
+
+		}
 
 }
 
