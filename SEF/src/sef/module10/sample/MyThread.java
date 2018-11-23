@@ -5,7 +5,7 @@ class MyThread {
 	
 	int count;
 	MyThread(String s, int count) {
-		super(s);
+		super();
 		this.count=count;
 	}
 

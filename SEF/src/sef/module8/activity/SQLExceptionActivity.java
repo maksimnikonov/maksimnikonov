@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class SQLExceptionActivity {
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
 			String url = "jdbc:mysql://localhost/activity1"; 
 			String user = "root";

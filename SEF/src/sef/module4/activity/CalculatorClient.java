@@ -18,20 +18,22 @@ public class CalculatorClient {
 		
 		System.out.println("*** Calculations will be performed using "+normalCalc.getCalculatorType()+ " calculator ***");
 		
-		// Add 
+		// Add +
 		int result = normalCalc.add(4, 5);
 		System.out.println("1) Add result is " + result);
 		
 				
-		// Multiply 
+		// Multiply *
 		int[] mul = {2, 3, 4};
 		result = normalCalc.multiply(mul);
-		System.out.println("2) Multiplication result is " + result); 
-		
+		System.out.println("2) Multiplication result is " + result);
 
+		//Subtract -
+		int sub = normalCalc.subtract(10, 5);
+		System.out.println("3) Subtract result is " + sub);
+
+		//Divide /
+		int div = normalCalc.divide(10, 5);
+		System.out.println("4) Divide result is " + div);
 	}
-
-
-	
-
 }
