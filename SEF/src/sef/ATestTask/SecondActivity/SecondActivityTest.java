@@ -6,33 +6,45 @@ import org.junit.Test;
 public class SecondActivityTest extends TestCase {
 
 
-	//TODO try to achieve 100% of test coverage
+    //TODO try to achieve 100% of test coverage
 
-	private SecondActivity theCalculator;
+    private SecondActivity theCalculator;
 
-	protected void setUp() throws Exception {
-		super.setUp();
-		//	Initialize variables to be used here
-		theCalculator = new SecondActivity();
-	}
+    protected void setUp() throws Exception {
+        super.setUp();
+        //	Initialize variables to be used here
+        theCalculator = new SecondActivity();
+    }
 
-	protected void tearDown() throws Exception {
-		super.tearDown();
-	}
+    protected void tearDown() throws Exception {
+        super.tearDown();
+    }
 
-	//Example ->
-	@Test
-	public void testGetSumPositiveValue() {
-		assertEquals(15, (theCalculator.getSum(5, 10)));
-		assertEquals(15, (theCalculator.getSum(10, 5)));
-	}
+    //Example ->
+    public class Calc extends Calculator {
+    }
 
-	//Example ->
-	@Test
-	public void testGetSumNegativeValue() {
-		assertEquals(5, (theCalculator.getSum(-5, 10)));
-		assertEquals(-5, (theCalculator.getSum(5, -10)));
-	}
+    @Test
+    public void testGetSumPositiveValue() {
+        assertEquals(15, (theCalculator.getSum(5, 10)));
+        assertEquals(15, (theCalculator.getSum(10, 5)));
+    }
 
+    //Example ->
+    @Test
+    public void testGetSumNegativeValue() {
+        assertEquals(5, (theCalculator.getSum(-5, 10)));
+        assertEquals(-5, (theCalculator.getSum(5, -10)));
+    }
+
+    @Test
+    public void testGetSubtractValue() {
+        assertEquals(67, (theCalculator.getSubtract(100, -33)));
+    }
+
+    @Test
+    public void testGetMultiply() {
+        assertEquals(3300, (theCalculator.getMultiply(100, 33)));
+    }
 }
 

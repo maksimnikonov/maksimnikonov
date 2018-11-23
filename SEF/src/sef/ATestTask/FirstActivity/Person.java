@@ -5,50 +5,57 @@ public class Person {
 
 //TODO 1 Implement Person Attributes
 
+    public String FirstName;
+    public String SecondName;
+    public int Age;
+
 	//Behavior - default constructor
 	public Person(){
-		this.firstName="Unknown";
-		this.secondName = "Unknown";
-		this.age = 0;
+	    this.FirstName("John");
+		this.SecondName("Andrew");
+		this.Age(10);
 	}
+    public void Age(int i) {
+    }
+    public void FirstName(String john) {
+    }
+    public void SecondName(String Andrew){
+    }
 
-	//Behavior - parameterized constructor
+
+    //Behavior - parameterized constructor
 	public Person(String firstName, String secondName, int age){
-		this.firstName = firstName;
-		this.secondName = secondName;
-		this.age = age;
+		this.setFirstName("John");
+		this.setSecondName("Brethauer");
+		this.setAge(29);
 	}
 
 	// getter for String firstName
-	public String getFirstName() {
-		return firstName;
-	}
+	public String getFirstName() { return FirstName; }
 
 	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+		this.FirstName = firstName;
 	}
 
 	// getter for int age
 	public int getAge() {
-		return age;
+		return Age;
 	}
 
 	// setter for int age
-	public void setAge(int age) {
-		this.age = age;
-	}
+	public void setAge(int age) { this.Age = age; }
 
 	public String getSecondName() {
-		return secondName;
+		return SecondName;
 	}
 
 	public void setSecondName(String secondName) {
-		this.secondName = secondName;
+		this.SecondName = secondName;
 	}
 
 	//TODO 2 add all person info into announce() method
-	public String announce() {
-		return "I am " + getFirstName() + " " + getSecondName();
+	public void announce(){
+		System.out.println("I am " + getFirstName() + " my last name is " + getSecondName()+ " I am " + getAge() + " old ");
 	}
 }
 

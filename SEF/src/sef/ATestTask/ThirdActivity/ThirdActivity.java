@@ -17,8 +17,7 @@ public class ThirdActivity {
 
         for (int i = 0; i <= 10; i++) {
             System.out.println(arr[i]);
-        }
-        System.out.println("This should get printed even if there is an exception");
+            System.out.println("This should get printed even if there is an exception");}
 
     }
 
@@ -38,6 +37,10 @@ public class ThirdActivity {
             //TODO 4 prints a message "Thank you for using this program." always
             System.out.println("Thank you for using this program.");
 
+    }
+
+    {
+        System.out.println("Thank you for using this program.");
     }
 }
 
