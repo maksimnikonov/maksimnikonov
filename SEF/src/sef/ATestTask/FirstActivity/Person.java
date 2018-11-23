@@ -5,9 +5,15 @@ public class Person {
 
 //TODO 1 Implement Person Attributes
 
+
+	//Attributes
+	private String firstName;
+	private String secondName;
+	private int age;
+
 	//Behavior - default constructor
 	public Person(){
-		this.firstName="Unknown";
+		this.firstName = "Unknown";
 		this.secondName = "Unknown";
 		this.age = 0;
 	}
@@ -47,8 +53,10 @@ public class Person {
 	}
 
 	//TODO 2 add all person info into announce() method
-	public String announce() {
-		return "I am " + getFirstName() + " " + getSecondName();
+
+	public void anounce() {
+		System.out.println("My name is " + firstName + " and i am " + age + " years old");
 	}
 }
+
 
