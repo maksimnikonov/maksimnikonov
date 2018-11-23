@@ -33,7 +33,7 @@ setName("Ivan3") should throw the exception
 
 9) In third activity
  9.1 create try-catch blocks
- 9.2 handel the exceptions
+ 9.2 handle the exceptions
 
 
 
