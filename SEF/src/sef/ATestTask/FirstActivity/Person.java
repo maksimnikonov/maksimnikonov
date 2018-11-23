@@ -5,35 +5,33 @@ public class Person {
 
 //TODO 1 Implement Person Attributes
 
-	//Behavior - default constructor
-	public Person(){
-		this.firstName="Unknown";
+	protected int age;
+	private String firstName;
+	private String secondName;
+
+	//Behavior - parameterized constructor
+	public Person(String firstName, String secondName, int age, String title, double salary) {
+		this.firstName = "Unknown";
 		this.secondName = "Unknown";
 		this.age = 0;
 	}
 
-	//Behavior - parameterized constructor
-	public Person(String firstName, String secondName, int age){
-		this.firstName = firstName;
-		this.secondName = secondName;
-		this.age = age;
-	}
+	public Person() { }
 
-	// getter for String firstName
-	public String getFirstName() {
-		return firstName;
-	}
+	// getter for and setters String firstName
+	public String getFirstName() { return firstName;}
 
 	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+		if (!firstName.equals("")) this.firstName = firstName;
+		else this.firstName = "Unknown";
 	}
 
-	// getter for int age
+	// getter and setters S for int age
 	public int getAge() {
 		return age;
 	}
 
-	// setter for int age
+	// setter and getters for int age
 	public void setAge(int age) {
 		this.age = age;
 	}
@@ -43,12 +41,13 @@ public class Person {
 	}
 
 	public void setSecondName(String secondName) {
-		this.secondName = secondName;
-	}
-
+		if(!secondName.equals(""))this.secondName =secondName;
+		else this.firstName="Unknown";
+}
 	//TODO 2 add all person info into announce() method
 	public String announce() {
-		return "I am " + getFirstName() + " " + getSecondName();
+		return "Employee name and surname:  " + getFirstName() + getSecondName() + ", his/her age is: " + age;
+
 	}
 }
 
