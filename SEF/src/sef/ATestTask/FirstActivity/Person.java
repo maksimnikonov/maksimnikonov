@@ -3,7 +3,10 @@ package sef.ATestTask.FirstActivity;
 
 public class Person {
 
-//TODO 1 Implement Person Attributes
+//1 Implement Person Attributes
+	private String firstName;
+	private String secondName;
+	private int age;
 
 	//Behavior - default constructor
 	public Person(){
@@ -21,8 +24,12 @@ public class Person {
 
 	// getter for String firstName
 	public String getFirstName() {
-		return firstName;
+		if ((firstName.equals(""))) return  firstName = "Unknown";
+		else {
+			return firstName;
+		}
 	}
+
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
@@ -30,25 +37,29 @@ public class Person {
 
 	// getter for int age
 	public int getAge() {
-		return age;
+		if (age<0) return age = 0;
+		else {
+			return age;
+		}
 	}
-
 	// setter for int age
 	public void setAge(int age) {
 		this.age = age;
 	}
 
 	public String getSecondName() {
-		return secondName;
+		if ((secondName.equals(""))) return secondName = "Unknown";
+		else {
+			return secondName;
+		}
 	}
-
 	public void setSecondName(String secondName) {
 		this.secondName = secondName;
 	}
 
-	//TODO 2 add all person info into announce() method
+	// add all person info into announce() method
 	public String announce() {
-		return "I am " + getFirstName() + " " + getSecondName();
+		return "I am " + getFirstName() + " and my family name is " + getSecondName()+" with age "+getAge();
 	}
 }
 
