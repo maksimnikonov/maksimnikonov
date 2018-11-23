@@ -4,6 +4,9 @@ package sef.ATestTask.FirstActivity;
 public class Person {
 
 //TODO 1 Implement Person Attributes
+	private String firstName;
+	private String secondName;
+	int age;
 
 	//Behavior - default constructor
 	public Person(){
@@ -35,7 +38,11 @@ public class Person {
 
 	// setter for int age
 	public void setAge(int age) {
-		this.age = age;
+		if (age > 0) {
+			this.age = age;
+		} else {
+			System.out.println("Age is incorrect");
+		}
 	}
 
 	public String getSecondName() {
@@ -47,8 +54,9 @@ public class Person {
 	}
 
 	//TODO 2 add all person info into announce() method
-	public String announce() {
-		return "I am " + getFirstName() + " " + getSecondName();
+	public void announce() {
+		System.out.println ("My name is " + getFirstName() + " " + getSecondName() + " and i am " + getAge() + " years old ");
+
 	}
 }
 
