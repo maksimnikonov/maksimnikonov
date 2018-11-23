@@ -29,10 +29,58 @@ public class SecondActivityTest extends TestCase {
 
 	//Example ->
 	@Test
-	public void testGetSumNegativeValue() {
+	public void testGetSumOneNegativeValue() {
 		assertEquals(5, (theCalculator.getSum(-5, 10)));
 		assertEquals(-5, (theCalculator.getSum(5, -10)));
 	}
 
-}
+	@Test
+	public void testGetSumAllNegativeValues() {
+		assertEquals(-15, (theCalculator.getSum(-5, -10)));
+		assertEquals(-15, (theCalculator.getSum(-10, -5)));
+	}
 
+	@Test
+	public void testGetDifferencePositiveValues() {
+		assertEquals(-5, (theCalculator.getDifference(5, 10)));
+		assertEquals(5, (theCalculator.getDifference(10, 5)));
+	}
+
+	@Test
+	public void testGetDifferenceOneNegativeValue() {
+		assertEquals(15, (theCalculator.getDifference(5, -10)));
+		assertEquals(-15, (theCalculator.getDifference(-10, 5)));
+	}
+
+	@Test
+	public void testGetDifferenceAllNegativeValues() {
+		assertEquals(5, (theCalculator.getDifference(-5, -10)));
+		assertEquals(-5, (theCalculator.getDifference(-10, -5)));
+	}
+
+	public void testGetProductPositiveValues() {
+		assertEquals(12.0, (theCalculator.getProduct(6.0, 2.0)));
+		assertEquals(12.0, (theCalculator.getProduct(2.0, 6.0)));
+	}
+
+	public void testGetProductOneNegativeValue() {
+		assertEquals(-12.0, (theCalculator.getProduct(-6.0, 2.0)));
+		assertEquals(-12.0, (theCalculator.getProduct(2.0, -6.0)));
+	}
+	public void testGetProductAllNegativeValues() {
+		assertEquals(12.0, (theCalculator.getProduct(-6.0, -2.0)));
+		assertEquals(12.0, (theCalculator.getProduct(2.0, 6.0)));
+	}
+	public void testGetQuotientPositiveValues() {
+		assertEquals(3.0, (theCalculator.getQuotient(6.0, 2.0)));
+		assertEquals(0.3333333333333333, (theCalculator.getQuotient(2.0, 6.0)));
+	}
+	public void testGetQuotientOneNegativeValues() {
+		assertEquals(-3.0, (theCalculator.getQuotient(6.0, -2.0)));
+		assertEquals(-0.3333333333333333, (theCalculator.getQuotient(-2.0, 6.0)));
+	}
+	public void testGetQuotientAllNegativeValues() {
+		assertEquals(3.0, (theCalculator.getQuotient(-6.0, -2.0)));
+		assertEquals(0.3333333333333333, (theCalculator.getQuotient(-2.0, -6.0)));
+	}
+}
