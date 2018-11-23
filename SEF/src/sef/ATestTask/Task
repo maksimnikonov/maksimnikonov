@@ -1,37 +1,37 @@
 
 Tasks
 
-1) in file Person
+1) in file Person [x]
   1.1 Based on code implement Person attributes
   1.2 Add method for introduce of person ->
    "My name is <name> and i am <age> years old"
 
-2) In file Employee
+2) In file Employee [x]
   2.1 Add different constructors
   2.2 Add getters and setters
   2.3 Add method for introduce of person ->
   "My name is <name> and i am <age> years old
    I am work as <jobTitle> in <company>"
 
-3) in file Students
+3) in file Students [x]
   3.1 Create file students from scratch
   3.2 Add method for introduce of person ->
         "I am study in university <schoolName>"
 
-4) in file FirstActivity
+4) in file FirstActivity [x]
   4.1 create few employees
   4.2 try to print them from top salary to less
   4.3 create person who became a student, and after that became a employee (must be one instance)
 
-5) Create unit test for ALL classes (example in EmployeeTest)
+5) Create unit test for ALL classes (example in EmployeeTest) [x]
 
-6) Create good calculator in SecondActivity
-7) Add tests for calculator
+6) Create good calculator in SecondActivity [x]
+7) Add tests for calculator [x]
 
 8) Task for 1.5 point - when set firstName and secondName, check no numbers there. ->
 setName("Ivan3") should throw the exception
 
-9) In third activity
+9) In third activity [x]
  9.1 create try-catch blocks
  9.2 handel the exceptions
 
